@@ -1,0 +1,150 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+}
+
+h1 {
+    color: #d32f2f;
+    font-size: 2em;
+    margin: 0;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+#search-input {
+    flex-grow: 1;
+    padding: 12px 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    min-width: 250px;
+}
+
+#search-input:focus {
+    outline: none;
+    border-color: #d32f2f;
+    box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.2);
+}
+
+.filter-buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid #d32f2f;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #d32f2f;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.filter-buttons button:hover,
+.filter-buttons button.active {
+    background-color: #d32f2f;
+    color: #fff;
+}
+
+#permisos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+.permiso-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-left: 5px solid #d32f2f;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.permiso-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.permiso-card h3 {
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.permiso-card p {
+    margin: 8px 0;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.permiso-card strong {
+    color: #555;
+}
+
+.permiso-card[data-tipo="Familiar"] {
+    border-left-color: #1976d2;
+}
+.permiso-card[data-tipo="Personal"] {
+    border-left-color: #388e3c;
+}
+
+.no-results {
+    text-align: center;
+    padding: 40px;
+    font-size: 1.2em;
+    color: #777;
+    grid-column: 1 / -1;
+}
+
+#grado-input {
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+#grado-resultado {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5em;
+    }
+    .controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    #permisos-container {
+        grid-template-columns: 1fr;
+    }
+}

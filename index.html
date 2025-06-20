@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Buscador de Permisos CCOO - STEF LOS OLIVOS</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>BUSCADOR DE PERMISOS DE CCOO PARA STEF LOS OLIVOS en pruebas</h1>
+        </header>
+
+        <div class="controls">
+            <input type="text" id="search-input" placeholder="Escribe aquí la causa (ej: matrimonio, médico, mudanza...)">
+            <div class="filter-buttons">
+                <button id="btn-familiar">FAMILIAR</button>
+                <button id="btn-personal">PERSONAL</button>
+                <button id="btn-todos" class="active">TODOS</button>
+            </div>
+        </div>
+
+        <div id="permisos-container"></div>
+    </div>
+
+    <!-- Buscador de grados -->
+    <div style="margin-top: 30px;">
+        <h2>Buscar grado de parentesco</h2>
+        <input type="text" id="grado-input" placeholder="Escribe el familiar (ej: madre, cuñado...)" />
+        <p id="grado-resultado"></p>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
